@@ -12,6 +12,10 @@ require 'config.php';
 // (et de $_COOKIE selon la configuration de PHP).
 
 $erreur = '';
+$erreur = '';
+$nom = '';
+$note_info = '';
+$note_math = '';
 
 if (!isset($_POST['nom'], $_POST['note_info'], $_POST['note_math'])) {
     // Page ouverte directement, sans passer par le formulaire
