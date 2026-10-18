@@ -30,6 +30,11 @@ if (!isset($_POST['nom'], $_POST['note_info'], $_POST['note_math'])) {
         $erreur = 'Les notes doivent être comprises entre ' . NOTE_MIN . ' et ' . NOTE_MAX . '.';
     }
 }
+if ($erreur === '') {
+    $fp = fopen(__DIR__ . '/data/notes.csv', 'a');
+    fputcsv($fp, [$nom, $note_info, $note_math], ';');
+    fclose($fp);
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
