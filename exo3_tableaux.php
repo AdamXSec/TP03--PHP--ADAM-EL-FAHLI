@@ -155,6 +155,14 @@ echo '</pre>';
 // n'existent pas déjà (ici aucune, donc le résultat est identique à $a).
 // $a == $b est true : les deux tableaux contiennent les mêmes paires clé/valeur.
 // $a === $b est false : les paires sont les mêmes mais dans un ordre différent
+
+
+// Expérience 1 : avec include, un fichier inexistant provoque un avertissement
+// (Warning) mais le reste du script s'exécute. Avec require, c'est une erreur
+// fatale (Fatal error) : l'exécution s'arrête immédiatement.
+// Expérience 2 : include inclut le fichier à chaque appel (le menu apparaît
+// deux fois), alors que include_once ne l'inclut qu'une seule fois.
+
 include 'includes/pied_inc.php';
 ?>
 </body>
