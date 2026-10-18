@@ -67,3 +67,18 @@ if ($nb > 0) {
 ?>
 </body>
 </html>
+
+<?php 
+//-------------- 5.3 lecture avec fgets() -------------
+
+echo '<h2>Lecture avec fgets()</h2>';
+$fp = fopen($chemin, 'r');
+while (!feof($fp)) {
+    $ligne = fgets($fp, 250);
+    if (strlen($ligne) > 0) {
+        $tab = explode(';', trim($ligne));
+        echo $tab[0] . ' ' . $tab[1] . ' ' . $tab[2] . '<br>';
+    }
+}
+fclose($fp);
+?>
