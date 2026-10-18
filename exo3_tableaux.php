@@ -6,7 +6,17 @@
  */
 
 require 'config.php';
-
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Partie 3 : tableaux</title>
+</head>
+<body>
+<?php
+include 'includes/entete_inc.php';
+include 'includes/menu_inc.php';
 // ---------- 3.1 : création -----------
 
 echo '<h2> 3.1 : création</h2>';
@@ -145,4 +155,7 @@ echo '</pre>';
 // n'existent pas déjà (ici aucune, donc le résultat est identique à $a).
 // $a == $b est true : les deux tableaux contiennent les mêmes paires clé/valeur.
 // $a === $b est false : les paires sont les mêmes mais dans un ordre différent
-//
+include 'includes/pied_inc.php';
+?>
+</body>
+</html>
